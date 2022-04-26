@@ -4,21 +4,22 @@ Als Verleiher möchte ich meine Produkte einstellen können, um Verleihkunden zu
 
 ## Akzeptanzkriterien:
 
-Auf der Seite für Produkte einstellen, möchte der Verleiher folgende Daten eingeben:
+Beim Einstellen eines Produkts möchte der Verleiher folgende Daten eingeben:
 
 - Mehrere Bilder pro Produkt hochladen
-- Produkttitel/Bezeichnung/Name
+- Produkttitel
 - Produktpreis festlegen pro Tag
 - Produktbeschreibung Fließtext eingeben
+- Produktzustand (siehe unten)
 - Produktkategorie (siehe unten)
 
 ### Webansicht:
 
-![Desktop Ansicht Produkt Einstellen](img\desktop.jpg)
+![Desktop Ansicht Produkt Einstellen](desktop.jpg)
 
 ### Mobileansicht:
 
-![Mobile Ansicht Produkt Einstellen](img\mobile.jpg)
+![Mobile Ansicht Produkt Einstellen](mobile.jpg)
 
 ### Kategorien für Produktzustand:
 
@@ -27,7 +28,7 @@ Auf der Seite für Produkte einstellen, möchte der Verleiher folgende Daten ein
 - Gut
 - Akzeptabel
 
-### Produktkategorien für den Start
+### Kategorien für die Produktart
 
 - Elektronik
   - Audio & HiFi
@@ -53,7 +54,7 @@ API: http://localhost:8080/swagger-ui/index.html#/
 
 ### Design Tokens
 
-link-green: #D5E1D7
-light-gray: #EFEFF1
-dark-gray: #CDCDCD
-copy: #1F1F1F
+- link-green: #D5E1D7
+- light-gray: #EFEFF1
+- dark-gray: #CDCDCD
+- copy: #1F1F1F
