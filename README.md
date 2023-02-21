@@ -48,10 +48,6 @@ Beim Einstellen eines Produkts möchte der Verleiher folgende Daten eingeben:
   - Werkzeug
   - Sonstiges
 
-### Zusatzinfo
-
-API: http://localhost:8080/swagger-ui/index.html#/
-
 ### Design Tokens
 
 - link-green: #D5E1D7
