@@ -1,0 +1,26 @@
+.layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+}
+
+.card {
+  border: 1px solid var(--dark-gray);
+  padding: 1rem;
+  border-radius: 5px;
+  min-height: 200px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.inputs {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  gap: 1rem;
+  margin: 0 10%;
+}

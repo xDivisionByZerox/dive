@@ -1,0 +1,22 @@
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: var(--primary);
+  padding: 0.5rem 1rem;
+
+  ul {
+    flex: 1 auto;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+
+    li {
+      list-style-type: none;
+    }
+  }
+}
+
+main {
+  margin: 2rem 20vw;
+}

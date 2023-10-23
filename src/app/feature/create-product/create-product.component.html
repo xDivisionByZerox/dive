@@ -1,0 +1,32 @@
+<p>Wir helfen dir gerne, ein Produkt zu erfassen:</p>
+
+<form class="layout" [formGroup]="form">
+  <app-upload-zone class="card"></app-upload-zone>
+  <div class="spacer"></div>
+  <div class="card">
+    <p>Inventarnummer:</p>
+    <p>Für den Leiher sichtbar:</p>
+
+    <div class="inputs">
+      <label for="name">Name</label>
+      <input type="text" id="name" formControlName="name" />
+
+      <label for="category">Kategorie</label>
+      <input type="text" id="category" formControlName="category" />
+
+      <label for="description">Beschreibung</label>
+      <input type="text" id="description" formControlName="description" />
+
+      <label for="condition">Zustand</label>
+      <input type="text" id="condition" formControlName="condition" />
+
+      <label for="delivery">Lieferung</label>
+      <input type="checkbox" id="delivery" formControlName="delivery" />
+    </div>
+  </div>
+  <div class="card">sadffsad</div>
+</form>
+
+<div class="row">
+  <button type="submit">Produkt einstellen</button>
+</div>
