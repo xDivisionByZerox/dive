@@ -19,8 +19,18 @@
 }
 
 .inputs {
-  display: grid;
-  grid-template-columns: 1fr 4fr;
-  gap: 1rem;
+  display: flex;
+  flex-direction: column;
   margin: 0 10%;
+  gap: 1rem;
+
+  .form-input {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    gap: 1rem;
+
+    input {
+      width: max-content;
+    }
+  }
 }
