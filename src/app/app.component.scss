@@ -2,6 +2,8 @@ nav {
   display: flex;
   flex-direction: row;
   align-items: center;
+
+  font-weight: bold;
   background-color: var(--primary);
   padding: 0.5rem 1rem;
 
@@ -9,7 +11,7 @@ nav {
     flex: 1 auto;
     display: flex;
     flex-direction: row;
-    gap: 1rem;
+    gap: 1.5rem;
 
     li {
       list-style-type: none;
