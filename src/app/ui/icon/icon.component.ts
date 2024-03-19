@@ -5,20 +5,25 @@ import {
   ElementRef,
   Input,
   inject,
+  numberAttribute,
 } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
-import { BehaviorSubject, switchMap, tap } from 'rxjs';
+import { BehaviorSubject, combineLatest, switchMap } from 'rxjs';
 
 @Component({
   selector: 'app-icon',
   template: '',
-  styleUrls: ['./icon.component.scss'],
   standalone: true,
 })
 export class IconComponent implements AfterViewInit {
   @Input({ required: true })
   set name(value: string) {
     this.name$.next(value);
+  }
+
+  @Input({ transform: numberAttribute })
+  set size(value: number) {
+    this.size$.next(value);
   }
 
   private readonly name$ = new BehaviorSubject('');
@@ -29,13 +34,21 @@ export class IconComponent implements AfterViewInit {
     )
   );
 
+  private readonly size$ = new BehaviorSubject(48);
+
   private readonly http = inject(HttpClient);
-  private readonly elementRef: ElementRef<Element> = inject(ElementRef);
+  private readonly elementRef: ElementRef<HTMLElement> = inject(ElementRef);
 
   ngAfterViewInit(): void {
-    this.iconElement$.subscribe({
-      next: (svg) => {
-        this.elementRef.nativeElement.innerHTML = svg;
+    combineLatest({
+      iconContent: this.iconElement$,
+      size: this.size$,
+    }).subscribe({
+      next: ({ iconContent, size }) => {
+        this.elementRef.nativeElement.innerHTML = iconContent;
+        const svgElement = this.elementRef.nativeElement.querySelector('svg');
+        svgElement?.setAttribute('height', size.toString());
+        svgElement?.setAttribute('width', size.toString());
       },
     });
   }
