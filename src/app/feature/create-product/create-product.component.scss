@@ -9,6 +9,7 @@
   padding: 1rem;
   border-radius: 5px;
   min-height: 200px;
+  overflow: hidden;
 }
 
 .row {
@@ -18,20 +19,22 @@
   align-items: center;
 }
 
-.inputs {
-  display: flex;
-  flex-direction: column;
-  margin: 0 10%;
+.layout__row-2 {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
   gap: 1rem;
+}
 
-  .form-input {
-    display: grid;
-    grid-template-columns: 1fr 4fr;
-    gap: 1rem;
+.input-container {
+  --margin: 2rem;
 
-    input {
-      width: max-content;
-    }
+  label {
+    margin-left: var(--margin);
+  }
+
+  input {
+    min-width: 5ch;
+    margin-right: var(--margin);
   }
 }
 

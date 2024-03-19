@@ -4,34 +4,27 @@
   <app-upload-zone class="card"></app-upload-zone>
   <div class="spacer"></div>
   <div class="card">
-    <p>Inventarnummer:</p>
+    <p class="layout__row-2">
+      <span>Inventarnummer:</span>
+      <span>_______________</span>
+    </p>
     <p>Für den Leiher sichtbar:</p>
 
-    <div class="inputs">
-      <div class="form-input">
-        <label for="name">Name</label>
-        <input type="text" id="name" formControlName="name" />
-      </div>
+    <div class="layout__row-2 input-container">
+      <label for="name">Name</label>
+      <input type="text" id="name" formControlName="name" />
 
-      <div class="form-input">
-        <label for="category">Kategorie</label>
-        <input type="text" id="category" formControlName="category" />
-      </div>
+      <label for="category">Kategorie</label>
+      <input type="text" id="category" formControlName="category" />
 
-      <div class="form-input">
-        <label for="description">Beschreibung</label>
-        <input type="text" id="description" formControlName="description" />
-      </div>
+      <label for="description">Beschreibung</label>
+      <input type="text" id="description" formControlName="description" />
 
-      <div class="form-input">
-        <label for="condition">Zustand</label>
-        <input type="text" id="condition" formControlName="condition" />
-      </div>
+      <label for="condition">Zustand</label>
+      <input type="text" id="condition" formControlName="condition" />
 
-      <div class="form-input">
-        <label for="delivery">Lieferung</label>
-        <input type="checkbox" id="delivery" formControlName="delivery" />
-      </div>
+      <label for="delivery">Lieferung</label>
+      <input type="checkbox" id="delivery" formControlName="delivery" />
     </div>
   </div>
   <div class="card">
