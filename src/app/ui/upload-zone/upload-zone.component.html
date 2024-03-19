@@ -1,2 +1,12 @@
 <app-icon name="photo-add" [size]="24"></app-icon>
 <span>Füge ganz einfach ein Bild hinzu!</span>
+
+<div class="images-preview-container">
+  <div class="image-container" *ngFor="let file of files$ | async">
+    <img [src]="file.url" [alt]="file.name" />
+    <div class="hover-layer" (click)="removeFile(file, $event)">
+      <!-- todo change delete icon -->
+      <app-icon name="message"></app-icon>
+    </div>
+  </div>
+</div>

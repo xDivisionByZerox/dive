@@ -4,4 +4,46 @@
   justify-content: center;
   align-items: center;
   padding: 2.5rem;
+
+  cursor: pointer;
+
+  color: #d1d1d1;
+}
+
+.images-preview-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+
+  .image-container {
+    --size: 100px;
+
+    height: var(--size);
+    width: var(--size);
+
+    position: relative;
+
+    img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+
+    .hover-layer {
+      position: absolute;
+      inset: 0;
+
+      opacity: 0;
+      transition: 100ms;
+
+      display: grid;
+      place-items: center;
+
+      background-color: var(--primary);
+    }
+
+    &:hover .hover-layer {
+      opacity: 0.7;
+    }
+  }
 }
